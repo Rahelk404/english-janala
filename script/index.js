@@ -53,7 +53,6 @@ const loadWordDetail = async (id) => {
 
 
 const displayWordDetails = (word) => {
-    console.log(word);
     const detailsBox = document.getElementById("details-container");
     detailsBox.innerHTML = `
       <div class="">
