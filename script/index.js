@@ -138,7 +138,7 @@ loadLessons();
 
 
 
-document.getElementById('btn-search').addEventListener("keydown", () => {
+document.getElementById('btn-search').addEventListener("click", () => {
     removeActive();
     const input = document.getElementById('input-search');
     const searchValue = input.value.trim().toLowerCase();
