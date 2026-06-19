@@ -101,12 +101,25 @@
         </div>
     </section>
 
+
     <!-- Vocabulary section -->
     <section>
         <h2 class="text-4xl font-bold mb-8 text-center"> <span class="text-sky-400">Let's </span> Learn Vocabularies
         </h2>
 
         <div id="level-container" class="flex gap-5 flex-wrap justify-center"></div>
+    </section>
+
+
+    <section class="flex justify-center my-10">
+        <div class="join">
+            <div>
+                <label class="input validator join-item">
+                    <input id="input-search" type="text" placeholder="Search Vocabulary Now" required />
+                </label>
+            </div>
+            <button id="btn-search" class="btn btn-primary join-item">Search</button>
+        </div>
     </section>
 
     <!-- spinner section / Loading -->
@@ -126,11 +139,7 @@
 
 
 
-    <!-- Open the modal using ID.showModal() method -->
-    <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
-
-
-
+    <!-- Modal -->
     <dialog id="word_modal" class="modal modal-bottom sm:modal-middle">
         <div class="modal-box">
             <div id="details-container" class="space-y-5">
