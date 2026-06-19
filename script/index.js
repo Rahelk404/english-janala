@@ -7,13 +7,24 @@ const loadLessons = () => {
 const loadLevelWord = (id) => {
     const url = `https://openapi.programming-hero.com/api/level/${id}`;
     fetch(url)
-    .then((res) => res.json())
-    .then((data) => displayLevelWord(data.data))
+        .then((res) => res.json())
+        .then((data) => displayLevelWord(data.data))
 }
 
 const displayLevelWord = (words) => {
     const wordContainer = document.getElementById("word-container");
     wordContainer.innerHTML = "";
+
+    if (words.length == 0) {
+        wordContainer.innerHTML = `
+        <div class="text-center col-span-full rounded-xl py-10 space-y-6 font-bangla">
+        <img class = "mx-auto" src="./assets/alert-error.png" alt="">
+            <p class="text-xl font-medium text-gray-400 ">এই Lesson এ এখনো কোন Vocabulary যুক্ত করা হয়নি।</p>
+            <h2 class="font-bold text-4xl">নেক্সট Lesson এ যান</h2>
+        </div>
+        `
+        return;
+    }
 
     words.forEach((word) => {
         const card = document.createElement('div');
